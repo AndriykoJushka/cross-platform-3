@@ -1,1 +1,7 @@
-<a th:fragment="sidebarItem" th:href="${link}" class="block p-2 text-gray-700 hover:bg-gray-200" th:text="${name}"></a>
+<div th:fragment="sidebarItem(link, itemId, name)">
+    <li>
+        <a th:href="${link}" th:classappend="${activeMenuItem == itemId} ? 'bg-blue-600 text-white' : 'text-gray-900'" class="flex items-center p-2 text-base font-normal rounded-lg hover:bg-gray-100">
+            <span th:text="${name}" class="ml-3"></span>
+        </a>
+    </li>
+</div>

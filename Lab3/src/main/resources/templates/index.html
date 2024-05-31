@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"
-      layout:decorate="~{layouts/layout}" xmlns:layout="http://www.w3.org/1999/xhtml">
+      layout:decorate="~{layouts/layout}" xmlns:layout="http://www.w3.org/1999/xhtml" th:with="activeMenuItem='home'">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
@@ -10,45 +10,37 @@
 
     <section  layout:fragment="page-content">
         <div class="bg-white p-6 rounded shadow mb-8">
-            <h1 class="text-3xl font-bold mb-4">Welcome to Chernivtsi</h1>
-            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel lacus vehicula, posuere justo vitae, auctor tortor.</p>
+            <h1 class="text-3xl font-bold mb-4">Welcome to Gallery</h1>
+            <p class="text-gray-600">Info  about art gallery</p>
         </div>
         <div class="bg-white p-6 rounded shadow mb-8">
-            <h2 class="text-2xl font-bold mb-4">Popular Excursions</h2>
+            <h2 class="text-2xl font-bold mb-4">Popular Works</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="bg-gray-100 p-4 rounded shadow">
                     <img src="https://via.placeholder.com/300x150" alt="Excursion1" class="w-full h-32 object-cover mb-4 rounded">
-                    <h3 class="text-xl font-bold mb-2">Excursion1</h3>
-                    <p class="text-gray-600">Explore the beautiful sights and rich history of Excursion1.</p>
+                    <h3 class="text-xl font-bold mb-2">Van Gogh</h3>
+                    <p class="text-gray-600">Description of first art</p>
                 </div>
                 <div class="bg-gray-100 p-4 rounded shadow">
                     <img src="https://via.placeholder.com/300x150" alt="Excursion2" class="w-full h-32 object-cover mb-4 rounded">
-                    <h3 class="text-xl font-bold mb-2">Excursion2</h3>
-                    <p class="text-gray-600">Discover the amazing landscapes and cultural heritage of Excursion2.</p>
+                    <h3 class="text-xl font-bold mb-2">Malevych</h3>
+                    <p class="text-gray-600">Description of second art</p>
                 </div>
                 <div class="bg-gray-100 p-4 rounded shadow">
                     <img src="https://via.placeholder.com/300x150" alt="Excursion3" class="w-full h-32 object-cover mb-4 rounded">
-                    <h3 class="text-xl font-bold mb-2">Excursion3</h3>
-                    <p class="text-gray-600">Join us for an unforgettable journey through Excursion3.</p>
+                    <h3 class="text-xl font-bold mb-2">Marchuk</h3>
+                    <p class="text-gray-600">Description of third art</p>
                 </div>
             </div>
         </div>
         <div class="bg-white p-6 rounded shadow mb-8">
             <form class="space-y-4">
                 <div>
-                    <label for="guide" class="block text-gray-700">Обрати екскурсовода:</label>
+                    <label for="guide" class="block text-gray-700">Choose type of visit:</label>
                     <select id="guide" name="guide" required class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
-                        <option value="guide1">Екскурсовод 1</option>
-                        <option value="guide2">Екскурсовод 2</option>
-                        <option value="guide3">Екскурсовод 3</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="tour" class="block text-gray-700">Обрати екскурсію:</label>
-                    <select id="tour" name="tour" required class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
-                        <option value="tour1">Екскурсія 1</option>
-                        <option value="tour2">Екскурсія 2</option>
-                        <option value="tour3">Екскурсія 3</option>
+                        <option value="guide1">Barocco</option>
+                        <option value="guide2">Modern</option>
+                        <option value="guide3">Minimalism</option>
                     </select>
                 </div>
                 <div>

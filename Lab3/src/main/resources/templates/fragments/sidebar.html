@@ -1,20 +1,17 @@
-
-<aside th:fragment="pc-sidebar" class="w-64">
+<aside th:fragment="pc-sidebar" class="w-64 hidden md:block">
     <nav>
         <ul>
-            <li th:insert="fragments/sidebar-item :: sidebarItem('Menu Item 1', '#')"></li>
-            <li th:insert="fragments/sidebar-item :: sidebarItem('Menu Item 2', '#')"></li>
-            <li th:insert="fragments/sidebar-item :: sidebarItem('Menu Item 3', '#')"></li>
+            <li th:insert="fragments/sidebar-item :: sidebarItem('#', 'menu-item1','About us')"></li>
+            <li th:insert="fragments/sidebar-item :: sidebarItem('#', 'menu-item1','About us')"></li>
+            <li th:insert="fragments/menu-item :: menu-item('#', 'menu-item3','Menu Item 3')"></li>
         </ul>
     </nav>
 </aside>
-<!-- Mobile menu -->
 <aside th:fragment="mobile-sidebar" class="md:hidden">
     <nav>
-        <ul>
-            <li th:insert="fragments/sidebar-item :: sidebarItem('Menu Item 1', '#')"></li>
-            <li th:insert="fragments/sidebar-item :: sidebarItem('Menu Item 2', '#')"></li>
-            <li th:insert="fragments/sidebar-item :: sidebarItem('Menu Item 3', '#')"></li>
+        <ul>  <li th:insert="fragments/menu-item :: menu-item('#', 'menu-item1','Menu Item 1')"></li>
+            <li th:insert="fragments/menu-item :: menu-item( '#', 'menu-item2','Menu Item 2')"></li>
+            <li th:insert="fragments/menu-item :: menu-item('#', 'menu-item3','Menu Item 3')"></li>
         </ul>
     </nav>
 </aside>
